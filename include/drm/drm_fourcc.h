@@ -110,6 +110,7 @@
  * index 1 = Cb:Cr plane, [15:0] Cb:Cr little endian
  */
 #define DRM_FORMAT_NV12		fourcc_code('N', 'V', '1', '2') /* 2x2 subsampled Cr:Cb plane */
+#define DRM_FORMAT_NV12_10	fourcc_code('N', 'A', '1', '2') /* 2x2 subsampled Cr:Cb plane */
 #define DRM_FORMAT_NV21		fourcc_code('N', 'V', '2', '1') /* 2x2 subsampled Cb:Cr plane */
 #define DRM_FORMAT_NV16		fourcc_code('N', 'V', '1', '6') /* 2x1 subsampled Cr:Cb plane */
 #define DRM_FORMAT_NV61		fourcc_code('N', 'V', '6', '1') /* 2x1 subsampled Cb:Cr plane */
@@ -155,6 +156,7 @@
 #define DRM_FORMAT_MOD_VENDOR_NV      0x03
 #define DRM_FORMAT_MOD_VENDOR_SAMSUNG 0x04
 #define DRM_FORMAT_MOD_VENDOR_QCOM    0x05
+#define DRM_FORMAT_MOD_VENDOR_ARM    0x06
 /* add more to the end as needed */
 
 #define fourcc_mod_code(vendor, val) \
@@ -228,5 +230,7 @@
  * For more information: see https://linuxtv.org/downloads/v4l-dvb-apis/re32.html
  */
 #define DRM_FORMAT_MOD_SAMSUNG_64_32_TILE	fourcc_mod_code(SAMSUNG, 1)
+
+#define DRM_FORMAT_MOD_ARM_AFBC			fourcc_mod_code(ARM, 1)
 
 #endif /* DRM_FOURCC_H */
